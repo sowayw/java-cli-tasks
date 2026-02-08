@@ -1,6 +1,6 @@
-# Java CLI Tasks 🗂️
+# Java CLI Tasks 
 
-🎯 **Overview**  
+## **Overview**  
 A simple, lightweight Task Tracker implemented in Java with a Command Line Interface (CLI).  
 You can add, update, view, and delete tasks. Each task keeps track of its **status** and **timestamps** for creation and last update.
 
@@ -10,43 +10,38 @@ You can add, update, view, and delete tasks. Each task keeps track of its **stat
 
 - Add tasks  
 - Delete tasks  
-- Mark tasks as **Todo**, **In Progress**, or **Done**  
-- View all tasks with formatted output: `[Task: ID | Description: ... | Status: ... | Created: ... | Updated: ...]`  
+- Mark tasks as **In Progress**, or **Done**  
+- View all tasks with formatted output: `"id: .., description: .., status: .., createdAt: .., updatedAt: .. "`  
 - Minimal dependencies: pure Java, no external libraries  
 
 ---
 
-## 🚀 **How to Compile & Run**
+## **How to Compile & Run**
 
 **1. Clone the repository:** 
-```html
+``` bash
 git clone https://github.com/sowayw/java-cli-tasks.git
-+cd java-cli-tasks
+cd "java-cli-tasks/src"
 ```
 
 **2. Compile the source code:**
 ```html
-javac -d out src/Main.java src/model/*.java src/exception/*.java
+javac TaskCLI.java
 ```
 
 **3. Run the application:**
 ```html
-java -cp out Main
+java TaskCLI [command]
 ```
 
 ## Usage
 
 ```html
-Enter command: add
-Enter text of task: Lol
-Task has successfully added.
+java TaskCLI add "go to gym at 12:00"
 ```
 
-- help - Show all commands.
 - add - Add task.
 - del - Delete task.
-- mark-todo - Mark task as todo.
 - mark-done - Mark task as done.
 - mark-in-progress - Mark task as in progress.
 - list - Show all tasks.
-- exit - Exit from program.
